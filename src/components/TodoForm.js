@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 
-function ToDoForm()
+function ToDoForm(props)
 {
     const [input, setInput] = useState('')
     const handleChange = (e) => {
@@ -8,6 +8,12 @@ function ToDoForm()
     }
     const handleSubmit = (e) => {
      e.preventDefault();
+
+     props.onSubmit({
+        id: Math.floor(Math.random()*10000),
+        text: input
+     })
+     setInput('');
     }
     return (
         <div>
