@@ -51,7 +51,7 @@ function ToDoForm(props)
                  ref={inputRef}
                  
                 />
-                <button className='todo-button'>Add</button>
+                <button className='todo-button'>Add #</button>
                 </div>
                 )
                 } 
